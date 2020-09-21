@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>TEMPERATURE CONVERTER</h1>
+<p>Type a value in the Fahrenheit field to convert the value to Celcius</p>
+<p>Fahrenheit</p>
+<input type="number" id="toF"><br/><br/>
+<button onclick="doi()">doi nhiet do</button>
+<p id="toC">Celcius</p>
+</body>
+<script>
+    function chuyendoinhietdo(dof) {
+        return (dof - 32) * 9 / 5;
+    }
+
+    function doi() {
+        let x = document.getElementById("toF").value;
+        var Celcius = chuyendoinhietdo(x)
+        document.getElementById("toC").innerHTML =  Celcius;
+    }
+</script>
+</html>
